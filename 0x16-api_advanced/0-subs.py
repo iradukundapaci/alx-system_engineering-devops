@@ -9,12 +9,13 @@ import json as js
 
 BASE_URL = "https://www.reddit.com/dev/api/"
 
+
 def number_of_subscribers(subreddit):
     """
         function to get subscribers for a subreddit
         subreddit: the provided sub reddit
     """
-    
+
     user_agent = {'User-agent': 'Google Chrome Version 120.0.0.0'}
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
     res = re.get(url, headers=user_agent)
@@ -22,8 +23,8 @@ def number_of_subscribers(subreddit):
         content = res.json()
         try:
             return content.get("data").get("subscribers")
-        except:
+        except (Exception):
             return 0
+
     else:
         return 0
-

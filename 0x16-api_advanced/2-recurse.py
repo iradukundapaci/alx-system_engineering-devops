@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
    get all hot titles for a subreddit
-   using recursion 
+   using recursion
 """
 import requests as re
 after = None
@@ -17,7 +17,7 @@ def recurse(subreddit, hot_list=[]):
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     parameters = {'after': after}
     results = re.get(url, params=parameters, headers=user_agent,
-                           allow_redirects=False)
+                     allow_redirects=False)
 
     if results.ok:
         after_data = results.json().get("data").get("after")
