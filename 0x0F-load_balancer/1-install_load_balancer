@@ -35,7 +35,7 @@ frontend http-in
 backend servers
     balance roundrobin
     server 162226-web-01 100.25.192.36:80 check
-    server 162226-web-01 54.236.48.165:80 check
+    server 162226-web-02 54.236.48.165:80 check
 "
 
 # shellcheck disable=SC2154
