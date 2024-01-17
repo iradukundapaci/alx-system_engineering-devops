@@ -5,9 +5,6 @@
 """
 
 import requests as re
-import json as js
-
-BASE_URL = "https://www.reddit.com/dev/api/"
 
 
 def number_of_subscribers(subreddit):
