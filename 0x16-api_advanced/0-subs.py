@@ -3,7 +3,6 @@
  function that return number of
     subscribers for a sub reddit
 """
-
 import requests as re
 
 
@@ -14,8 +13,10 @@ def number_of_subscribers(subreddit):
     """
 
     user_agent = {'User-agent': 'Google Chrome Version 120.0.0.0'}
+
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
     res = re.get(url, headers=user_agent)
+
     if (res.ok):
         content = res.json()
         try:
